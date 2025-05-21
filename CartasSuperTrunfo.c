@@ -2,7 +2,7 @@
 
 int main() {
     // Carta 1
-    char estado1;
+    char estado1[3];
     char codigo1[4];
     char nomeCidade1[50];
     int populacao1;
@@ -11,7 +11,7 @@ int main() {
     int pontosTuristicos1;
 
     // Carta 2
-    char estado2;
+    char estado2[3];
     char codigo2[4];
     char nomeCidade2[50];
     int populacao2;
@@ -22,7 +22,8 @@ int main() {
     // Coleta de dados da Carta 1
     printf("=== Cadastro da Carta 1 ===\n");
     printf("Digite o estado (A-H):\n");
-    scanf(" %c", &estado1);
+    scanf(" %s", estado1);
+    getchar(); // Limpa o buffer
 
     printf("Digite o código da carta (ex: A01):\n");
     scanf("%s", codigo1);
@@ -45,7 +46,8 @@ int main() {
     // Coleta de dados da Carta 2
     printf("\n=== Cadastro da Carta 2 ===\n");
     printf("Digite o estado (A-H):\n");
-    scanf(" %c", &estado2);
+    scanf(" %s", estado2);
+    getchar(); // Limpa o buffer
 
     printf("Digite o código da carta (ex: B02):\n");
     scanf("%s", codigo2);
@@ -67,7 +69,7 @@ int main() {
 
     // Exibição dos dados
     printf("\n=== Carta 1 ===\n");
-    printf("Estado: %c\n", estado1);
+    printf("Estado: %s\n", estado1);
     printf("Código: %s\n", codigo1);
     printf("Nome da Cidade: %s\n", nomeCidade1);
     printf("População: %d\n", populacao1);
@@ -76,7 +78,7 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
 
     printf("\n=== Carta 2 ===\n");
-    printf("Estado: %c\n", estado2);
+    printf("Estado: %s\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", nomeCidade2);
     printf("População: %d\n", populacao2);
@@ -85,5 +87,4 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
 
     return 0;
-
-    }
+}
